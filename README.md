@@ -1,7 +1,7 @@
 # postman2md
 postman markdown nodejs 
 # 使用方式 #
-1.下载该项目
+1.下载该项目<br>
 2.在项目目录下建一个index.json文件
 3.将postman导出的接口文档内容粘贴到index.json文件中
 4.运行json2markdown.js (node run json2markdown.js)
