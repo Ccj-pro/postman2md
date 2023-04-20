@@ -10,13 +10,13 @@ function main() {
         if (fileList.length == 0) {
             return;
         }
+        let result = ``;
         fileList.forEach(name => {
             if (path.extname(name) !== ".json") {
                 console.log('跳过非.json文件： ', name);
                 return;
             }
             let res = fs.readFileSync("./" + name, "utf8");
-            let result = ``;
             res = JSON.parse(res);
             let item = res.item;
             for (let index = 0; index < item.length; index++) {
@@ -53,8 +53,8 @@ function main() {
                 }
                 result = result + '***\n';
             }
-            fs.writeFileSync('./index.md', result);
         });
+        fs.writeFileSync('./index.md', result);
 
     } catch (error) {
         console.log(error);
